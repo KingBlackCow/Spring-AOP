@@ -15,7 +15,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
 @SpringBootTest
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})//스프링 빈등록
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})//스프링 빈등록
+@Import(AspectV6Advice.class)//스프링 빈등록
 public class AopTest {
 
     @Autowired
